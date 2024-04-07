@@ -40,6 +40,7 @@ aside {
   margin-left: 250px;
   background-color: #39a0ca;
   padding: 24px;
+  min-height: 100vh;
 }
 
 .panel-head {
@@ -97,7 +98,7 @@ aside {
   justify-content: space-between;
   gap: 24px;
   padding: 24px;
-  font-size: 30px;
+  font-size: 24px;
   background-color: var(--blue);
 }
 

@@ -83,6 +83,11 @@ function drawTable(dt) {
     const buyerInput = document.createElement("input");
     buyerInput.value = el.buyer;
 
+    const countP = document.createElement("p");
+    countP.textContent = el.count;
+    const countInput = document.createElement("input");
+    countInput.value = el.count;
+
     const delButton = document.createElement("button");
     delButton.classList.add("panel-body-item-del");
     delButton.textContent = "Ջնջել";
@@ -100,6 +105,7 @@ function drawTable(dt) {
         el.color = colorInput.value.trim();
         el.price = priceInput.value.trim();
         el.buyer = buyerInput.value.trim();
+        el.count = countInput.value.trim();
       }
       editRow(el.id);
     });
@@ -112,6 +118,7 @@ function drawTable(dt) {
         colorInput,
         priceInput,
         buyerInput,
+        countInput,
         delButton,
         editButton
       );
@@ -123,6 +130,7 @@ function drawTable(dt) {
         colorP,
         priceP,
         buyerP,
+        countP,
         delButton,
         editButton
       );
@@ -167,7 +175,8 @@ function searchProduct(text) {
       item.model.toLowerCase().includes(text.toLowerCase()) ||
       item.color.toLowerCase().includes(text.toLowerCase()) ||
       item.price.toLowerCase().includes(text.toLowerCase()) ||
-      item.buyer.toLowerCase().includes(text.toLowerCase())
+      item.buyer.toLowerCase().includes(text.toLowerCase()) ||
+      item.count.toLowerCase().includes(text.toLowerCase())
   );
   clearTableContent();
   drawTable(searchedData);
