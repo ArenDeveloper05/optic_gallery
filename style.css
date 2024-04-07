@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Russo+One&family=Teko:wght@300&display=swap");
+
+:root {
+  --blue: #161748;
+  --ff1: "Josefin Sans", sans-serif;
+  --radius: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff1);
+}
+
+#root {
+  display: flex;
+}
+
+aside {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  padding: 24px;
+  background-color: var(--blue);
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  background-image: url(./images/logo.jpg);
+  background-size: cover;
+  border-radius: 100%;
+  margin: auto;
+}
+
+.panel {
+  width: 100%;
+  margin-left: 250px;
+  background-color: #39a0ca;
+  padding: 24px;
+}
+
+.panel-head {
+  max-width: 900px;
+  border: solid 3px var(--blue);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: auto;
+  padding: 32px;
+  border-radius: var(--radius);
+}
+
+.panel-head > input {
+  padding: 20px 30px;
+  border: none;
+  font-size: 26px;
+  color: var(--blue);
+  border-radius: calc(var(--radius) - 20px);
+}
+
+.panel-head > input:focus {
+  outline: 3px solid #161748;
+}
+
+.panel-head > button {
+  padding: 20px 30px;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: var(--blue);
+  color: white;
+}
+
+.panel-body {
+  border: solid 3px var(--blue);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: auto;
+  margin-top: 40px;
+  padding: 32px;
+}
+
+.panel-headings {
+  padding: 32px;
+  border: solid 3px var(--blue);
+  margin-top: 40px;
+}
+
+.panel-body-item,
+.panel-headings-content {
+  border: solid;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px;
+  font-size: 30px;
+  background-color: var(--blue);
+}
+
+.panel-body-item > p,
+.panel-headings-content > p {
+  color: white;
+  flex: 1;
+  max-width: 200px;
+  overflow: auto;
+}
+
+.panel-body-item > button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  flex: 1;
+  font-size: 20px;
+}
+
+.panel-body-item-del {
+  background-color: tomato;
+}
+
+.panel-body-item-edit {
+  background-color: #288ba8;
+}
+
+.panel-headings-search {
+  border: solid;
+  padding: 24px;
+  background-color: var(--blue);
+  margin-bottom: 30px;
+}
+
+.panel-headings-search > input {
+  width: 100%;
+  padding: 20px 30px;
+  font-size: 26px;
+  color: var(--blue);
+  border-radius: calc(var(--radius) - 20px);
+  border: none;
+  outline: none;
+}
+
+.panel-body-item input {
+  padding: 10px;
+}
